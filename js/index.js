@@ -60,6 +60,23 @@ navAbout.textContent = 'About';
 const navContact = document.querySelector('a:nth-of-type(6)');
 navContact.textContent = 'Contact';
 
+function changeColor() {
+  document.querySelectorAll('a').forEach(el => {
+    el.style.color = "green";
+  })
+};
+changeColor();
+
+const newALast = document.createElement("a");
+newALast.textContent = "Last";
+document.querySelector('nav').appendChild(newALast);
+
+const newAFirst = document.createElement('a');
+newAFirst.textContent = 'First';
+document.querySelector('nav').prepend(newAFirst);
+
+
+
 const headerMain = document.querySelector('h1');
 const newline = "\r\n";
 headerMain.textContent = 'DOM' + newline + 'Is' + newline + 'Awesome';
