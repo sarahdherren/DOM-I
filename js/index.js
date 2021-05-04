@@ -60,12 +60,11 @@ navAbout.textContent = 'About';
 const navContact = document.querySelector('a:nth-of-type(6)');
 navContact.textContent = 'Contact';
 
-function changeColor() {
-  document.querySelectorAll('a').forEach(el => {
-    el.style.color = "green";
-  })
-};
-changeColor();
+
+  document.querySelectorAll('a').forEach(item => {
+    item.style.color = "green";
+  });
+
 
 const newALast = document.createElement("a");
 newALast.textContent = "Last";
@@ -85,6 +84,12 @@ headerMain.style.whiteSpace = "pre";
 
 const button = document.querySelector('button');
 button.textContent = 'Get Started';
+
+
+
+const updateContent = () => {
+  headerMain.textContent = 'this' + newline + 'is' + newline + 'too many lines of code!'
+}
 
 
 const headerImage = document.querySelector('#cta-img');
@@ -137,3 +142,4 @@ const contactEmail = document.querySelector('.contact p:nth-of-type(3)');
 contactEmail.textContent = 'sales@greatidea.io';
 
 
+button.addEventListener('click', updateContent);
